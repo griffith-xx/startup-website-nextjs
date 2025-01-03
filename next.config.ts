@@ -1,12 +1,14 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   images: {
     unoptimized: true,
   },
-  assetPrefix: "/startup-website-nextjs/",
-  basePath: "/startup-website-nextjs",
+  assetPrefix: isProd ? "/startup-website-nextjs/" : "",
+  basePath: isProd ? "/startup-website-nextjs" : "",
   output: "export",
 };
 
