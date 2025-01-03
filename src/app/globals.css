@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,5 +19,19 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Work Sans", Arial, Helvetica, sans-serif;
+}
+
+.font-crimson {
+  font-family: "Crimson Text", Arial, Helvetica, sans-serif;
+}
+
+.bg {
+  background-color: #74c69d;
+}
+
+@layer components {
+  .container {
+    @apply px-5 mx-auto;
+  }
 }
